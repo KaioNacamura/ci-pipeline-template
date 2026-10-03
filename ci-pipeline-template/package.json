@@ -1,0 +1,27 @@
+{
+  "name": "ci-pipeline-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modelo de pipeline de CI no GitHub Actions para projetos Node com TypeScript e PostgreSQL.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run src",
+    "test:db": "vitest run tests-db",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.20.5",
+    "@types/pg": "^8.23.1",
+    "eslint": "^9.39.5",
+    "pg": "^8.23.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^3.2.7"
+  }
+}
